@@ -1,1 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+
+@use './assets/scss/variables';
+@import './assets/scss/mixins';
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--black);
+}
+
+.container {
+  max-width: min(90vw, 1200px);
+  margin: auto;
+}
+
+.logo {
+  width: 200px;
+}
+
+.sr-only {
+  border: 0;
+	clip: rect(1px, 1px, 1px, 1px); 
+	-webkit-clip-path: inset(50%);
+	clip-path: inset(50%); 
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	white-space: nowrap; 
+}

@@ -1,0 +1,108 @@
+@use '../../../assets/scss/mixins';
+
+.header {
+  background-color: var(--white);
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, .5);
+  
+  
+  &-top {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: var(--space-sm) 0;
+    font-weight: 600;
+    text-align: center;
+    font-size: var(--font-md);   
+  }
+
+  &-content {
+    @include mixins.flex;
+    padding: var(--space-lg) 0;    
+  }
+
+  &-menu {  
+    &__list {
+      display: flex;
+      gap: 25px;
+    }
+
+    &__item {      
+      text-transform: uppercase;
+      font-weight: 600;
+      color: va(--black);
+      letter-spacing: 1px;
+      cursor: pointer;          
+
+      &::after {
+        content: '';
+        display: block;        
+        width: 0;
+        height: 2px;
+        margin-top: 2px;
+        background-color: var(--primary-color);
+        transition: .3s;        
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+
+      &.active {
+        color: var(--primary-color);
+        font-weight: 700;
+
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &-right {
+    @include mixins.flex;
+    gap: 25px;
+  }
+
+  &-search,
+  &-account,
+  &-fav,
+  &-cart {
+     cursor: pointer;
+  }
+
+  &-search {
+    @include mixins.flex;
+    border-bottom: 1px solid rgba(0, 0, 0, .3);
+    padding-bottom: 2px;
+
+    input {
+      border: none;
+      outline: none;
+      font-size: var(--font-lg);
+      width: 55px;
+      margin-left: 5px;     
+      transition: .4s;
+
+      &:focus {
+        width: 100px;
+      }
+    }
+  }
+
+  &-cart {
+    position: relative;   
+
+    &__item {
+      @include mixins.flex-center;      
+      position: absolute;
+      top: -5px;
+      right: -10px;
+      background-color: var(--primary-color);
+      width: 22px;
+      height: 22px;
+      border-radius: 25px;
+      font-size: var(--font-md);
+      font-weight: 700;     
+      color: var(--white);
+    }
+  }
+}
