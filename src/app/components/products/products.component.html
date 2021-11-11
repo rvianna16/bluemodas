@@ -1,0 +1,30 @@
+<div class="products-last-collection">
+  <h2 class="products-last-collection__title" (click)="teste()">Ultima coleção</h2>
+
+  <div class="products-container">
+    <div class="products-card" *ngFor="let product of products">
+      <div class="product-image">
+        <img class="product-image__preview" src="{{ product.image }}">
+        <div class="product-fav">
+          <img src="../../../assets/icons/heart.png" alt="Favoritar">
+        </div>
+      </div>
+
+      <div class="product-info">
+        <div class="product-rating">
+          <svg class="product-rating--star" [class.full]="product.rating.rate >= 1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg class="product-rating--star" [class.full]="product.rating.rate >= 2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg class="product-rating--star" [class.full]="product.rating.rate >= 3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg class="product-rating--star" [class.full]="product.rating.rate >= 4"xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg class="product-rating--star" [class.full]="product.rating.rate == 5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          
+        </div>
+        <h3 class="product__title">{{ product.title }}</h3>
+        <span class="product__title"> {{ product.price | currency: 'BRL' }}</span>
+
+      </div>
+    </div>    
+  </div>
+
+
+</div>

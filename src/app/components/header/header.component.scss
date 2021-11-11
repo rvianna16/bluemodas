@@ -16,7 +16,7 @@
 
   &-content {
     @include mixins.flex;
-    padding: var(--space-lg) 0;    
+    padding: 25px 0;    
   }
 
   &-menu {  
