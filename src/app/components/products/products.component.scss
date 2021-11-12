@@ -1,36 +1,73 @@
-@use '../../../assets/scss/mixins';
+@use "../../../assets/scss/mixins";
 
 .products {
   &-last-collection {
+    margin-bottom: var(--space-lg);
+
     &__title {
       @include mixins.flex-center;
       flex-direction: column;
       text-align: center;
-      padding-bottom: 50px;      
+      margin-bottom: 30px;
 
       &::after {
-        content: '';
+        content: "";
         display: block;
         width: 80px;
-        height: 2px;
+        height: 3px;
         text-align: center;
-        margin-top: 10px;        
+        margin-top: 10px;
         background-color: var(--primary-color);
       }
     }
   }
 
   &-container {
-    display: flex;    
+    display: flex;
     gap: 20px;
   }
 
   &-card {
-    
-    width: 300px;
-    height: 500px;
+    width: 360px;
+    height: 560px;
+    padding: 12px;
+    cursor: pointer;
+    margin: 5px 3px;
+
+    &:hover {
+      box-shadow: 0 0 8px rgb(41 35 35 / 16%);
+    }
+
+    &:hover .btn.add-cart {
+      display: block;
+    }
+
+    .btn.add-cart {
+      width: 100%;
+      font-size: var(--font-md);
+      height: 40px;
+      display: none;
+      margin-top: var(--space-sm);
+    }
 
     .product {
+      &__title {
+        font-size: var(--font-lg);
+        font-weight: 400;
+        transition: 0.3s;
+        margin: var(--space-ssm) 0;
+
+        &:hover {
+          color: var(--primary-color);
+        }
+      }
+
+      &__price {
+        display: inline-block;
+        font-size: var(--font-lg);
+        font-weight: 700;
+      }
+
       &-image {
         position: relative;
 
@@ -38,7 +75,7 @@
           width: 100%;
           height: 400px;
           object-position: top;
-          object-fit: cover;          
+          object-fit: cover;
         }
       }
 
@@ -51,7 +88,7 @@
         width: 30px;
         height: 30px;
         border-radius: 20px;
-        cursor: pointer;        
+        cursor: pointer;
 
         img {
           width: 17px;
@@ -60,17 +97,77 @@
       }
 
       &-rating {
-        
+        margin-top: var(--space-sm);
+
         &--star {
-          fill: rgba(0, 0, 0, .4);
+          fill: rgba(0, 0, 0, 0.2);
           &.full {
             fill: var(--star);
-          }         
+          }
         }
       }
     }
   }
 }
 
+//offers
+.offers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin: var(--space-xl) 0;
 
+  &-card {    
+    color: var(--white);
+    text-align: center;
+    padding: var(--space-lg) 0;   
+    background-size: cover;
+    height: 350px;
+    position: relative;   
+    cursor: pointer;    
+    
 
+    //---Overlay---//
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 350px;
+      top: 0;
+      background: rgba(0, 0, 0, 0.4);     
+      position: absolute;   
+    }
+    //---Overlay---//
+
+    &-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    &__title {      
+      font-size: var(--font-xxvl);     
+    }
+
+    &__text {
+      opacity: .9;
+      font-size: var(--font-xl);
+    }
+
+    &--1 {
+      background: url("../../../assets/photo-3.jpg") center;
+    }
+
+    &--2 {
+      background: url("../../../assets/photo-4.jpg") center;
+
+      div {
+        margin-top: 220px;
+      }
+    }
+
+    &--3 {
+      background: url("../../../assets/photo-5.jpg") center;      
+    }
+  }
+ 
+}

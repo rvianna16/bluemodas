@@ -9,6 +9,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ProductsComponent } from './components/products/products.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SwiperModule } from 'swiper/angular';
+import { CartComponent } from './components/cart/cart.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { SwiperModule } from 'swiper/angular';
     HeaderComponent,
     HomeComponent,   
     ProductsComponent, 
-    FooterComponent
+    FooterComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
