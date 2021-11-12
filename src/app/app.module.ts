@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { ProductsComponent } from './components/products/products.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { SwiperModule } from 'swiper/angular';
 
 
 @NgModule({
@@ -14,12 +16,14 @@ import { ProductsComponent } from './components/products/products.component';
     AppComponent,
     HeaderComponent,
     HomeComponent,   
-    ProductsComponent
+    ProductsComponent, 
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SwiperModule
   ],
   providers: [],
   bootstrap: [AppComponent]

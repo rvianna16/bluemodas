@@ -1,11 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Subscription } from 'rxjs';
+
 import { ProductsService } from 'src/app/services/products.service';
+import { SwiperComponent } from "swiper/angular";
+
+import SwiperCore, { Autoplay,Navigation } from "swiper";
+SwiperCore.use([Autoplay, Navigation]);
 
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
-  styleUrls: ['./products.component.scss']
+  styleUrls: ['./products.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class ProductsComponent implements OnInit {
 

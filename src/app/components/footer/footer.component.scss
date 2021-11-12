@@ -1,0 +1,110 @@
+@use '../../../assets/scss/mixins';
+
+footer {
+  background-color: var(--secondary-color);
+  padding: var(--space-lg) 0;
+  color: var(--white);
+  
+}
+
+.newsletter {
+  @include mixins.flex;
+  gap: 30px;
+  padding-bottom: var(--space-lg);
+
+  &-flex {
+    @include mixins.flex-center;
+    border-right: 1px solid rgba( 255, 255, 255, 0.8);
+    padding-right: 20px;
+  }
+  &__title {
+    
+    font-size: var(--font-xxl);
+    margin-left: 8px;
+  }
+
+  &__text {
+    
+    opacity: .9;
+    max-width: 35%;
+    line-height: 25px;
+    margin-left: 8px;
+  }
+
+  &-form {
+    @include mixins.flex-center;
+    background-color: var(--white);
+    width: 40%;
+  }
+
+  &__input {
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding: var(--space-md);
+    font-size: var(--font-xl);
+    border-radius: 2px;
+  }
+
+  &__send {
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: url('../../../assets/icons/send.png');
+    cursor: pointer;
+    margin-right: var(--space-md);
+  }
+}
+
+.information {
+  padding: var(--space-xxl) 0;
+  border-top: 1px solid rgba( 255, 255, 255, .3);
+  border-bottom: 1px solid rgba( 255, 255, 255, .3);
+  &-links {
+    @include mixins.flex;
+    align-items: flex-start;
+    
+
+    dt {
+      font-weight: 700;
+      font-size: var(--font-xl);
+      margin-bottom: var(--space-lg);
+    }
+
+    li {
+      margin-bottom: var(--space-md);      
+      cursor: pointer;
+      max-width: 300px;
+      opacity: .7;
+      transition: .5s;
+
+     
+      &:hover {
+        opacity: 1;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.copy {
+  padding-top: var(--space-xl);
+  text-align: center;
+}
+
+.payments {
+  padding: var(--space-md) 0;
+  @include mixins.flex-center;
+  gap: 15px;
+
+  img {
+    width: 64px;
+  }
+
+  
+}
+

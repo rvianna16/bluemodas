@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ProductsComponent } from './products.component';
 import { ProductsService } from 'src/app/services/products.service';
+import { SwiperModule } from 'swiper/angular';
 
 
 
@@ -10,6 +11,7 @@ import { ProductsService } from 'src/app/services/products.service';
   declarations: [],
   imports: [
     CommonModule,
+    SwiperModule
   ],
   exports:[ProductsComponent],
   providers: [ProductsService]

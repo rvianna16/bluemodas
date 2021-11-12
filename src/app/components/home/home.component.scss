@@ -4,8 +4,8 @@
 
 .banner {
   @include mixins.flex-center;
-  position: relative;
-  top: -10px;
+  position: relative;  
+  z-index: -1;
   height: 750px;
   background: url("../../../assets/home.jpg") center;
   background-size: cover;
@@ -19,6 +19,7 @@
     height: 750px;
     background: rgba(0, 0, 0, 0.3);
     position: absolute;
+    z-index: -1;
   }
   //---Overlay---//
 

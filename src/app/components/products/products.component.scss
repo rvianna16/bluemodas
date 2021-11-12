@@ -21,8 +21,7 @@
   }
 
   &-container {
-    display: grid;
-    grid-template-columns: repeat(3, 300px);
+    display: flex;    
     gap: 20px;
   }
 
@@ -65,11 +64,13 @@
         &--star {
           fill: rgba(0, 0, 0, .4);
           &.full {
-            fill: var(--secondary-color);
+            fill: var(--star);
           }         
         }
       }
     }
   }
 }
+
+
 
