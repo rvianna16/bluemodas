@@ -1,1 +1,52 @@
-<p>cart works!</p>
+<div class="cart-container" [class.active]="openCart">
+  <div class="cart">
+    <div class="cart-header">
+      <button 
+      class="cart-header-btn" 
+      (click)="toggleCart()"
+      aria-label="Fechar carrinho de compras"
+      [attr.aria-expanded]="openCart">
+    </button>
+      <h3 class="cart-header__title">Carrinho de compras</h3>
+    </div>
+
+    <div class="cart-content">      
+      <div class="cart-product">
+        <img class="cart-product__image" src="../../../assets/photo-2.jpg" alt="Produto">
+        <div class="cart-product__info">
+          <h5 class="cart-product__name"> Produto 1</h5>
+          <span class="cart-product__price"> {{ 50 | currency: 'BRL'}} </span>
+          
+          
+        </div>
+        <div class="cart-product__amount">
+          <button class="input-btn" aria-label="Diminuir produto em 1 unidade">-</button>
+          <input type="text" readonly [value]="1">
+          <button class="input-btn" aria-label="Aumentar produto em 1 unidade">+</button>          
+        </div>
+        <button class="cart-product__remove" aria-label="Remover produto do carrinho"></button>
+      </div>    
+  </div>
+
+  <div class="cart-footer">
+    <div class="cart-notice">
+      <div *ngIf="50 < 200">
+        <p >Faltam {{ 200 - 50 | currency: 'BRL'}} para você</p>
+        <p>Ganhar Frete Grátis</p>
+      </div>
+      <div *ngIf="50 >= 200">
+        <p> Você ganhou frete grátis!</p>
+      </div>
+     
+    </div>
+    <div class="cart-total">
+      <div>
+        <h5>Total: {{ 50 | currency: 'BRL'}}</h5>
+        <span>até 3x de {{ 50 / 3 | currency: 'BRL'}} sem juros</span>
+      </div>
+      <div class="cart__buy">
+        <button class="btn">Finalizar compra</button>
+      </div>
+    </div>
+  </div> 
+</div>

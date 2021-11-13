@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-cart',
@@ -6,10 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cart.component.scss']
 })
 export class CartComponent implements OnInit {
+  @Input() openCart!: boolean;
+  @Output() closeCart = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  toggleCart() {
+    this.openCart = false;
+    this.closeCart.emit(false);       
   }
 
 }

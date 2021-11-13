@@ -6,10 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
+  tsCart: boolean = true;
+  
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  openCart() {
+    this.tsCart = true;
+  }
+
+  onCloseCart(event: any) {
+   this.tsCart = event;    
+  }
 }

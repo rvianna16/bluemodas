@@ -43,7 +43,12 @@
           <img src="../../assets/icons/heart.png" alt="Favoritar">
         </div>
 
-        <div class="header-cart">
+        <div 
+        class="header-cart" 
+        (click)="openCart()" 
+        aria-label="Carrinho de compra contém 0 produtos"
+        [attr.aria-expanded]="!tsCart"
+        >
           <img src="../../assets/icons/cart.png" alt="Sacola">
           <div class="header-cart__item">
             <span>0</span>
@@ -54,3 +59,9 @@
     </div>
   </div>      
 </header>
+
+
+<app-cart 
+  [openCart]="tsCart"
+  (closeCart)="onCloseCart($event)">
+</app-cart>

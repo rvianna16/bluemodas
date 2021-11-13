@@ -84,11 +84,16 @@
         position: absolute;
         top: 10px;
         right: 10px;
-        background: var(--white);
-        width: 30px;
-        height: 30px;
-        border-radius: 20px;
+        background-color: var(--white);
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
         cursor: pointer;
+        transition: .3s ease-in-out;
+
+        &:hover {
+          background-color: #ffe0e0;
+        }
 
         img {
           width: 17px;
@@ -115,7 +120,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  margin: var(--space-xl) 0;
+  margin: var(--space-xl) 0;  
 
   &-card {    
     color: var(--white);
@@ -125,7 +130,11 @@
     height: 350px;
     position: relative;   
     cursor: pointer;    
+    transition: .4s ease-in-out;
     
+    &:hover {
+      transform: scale(1.03);
+    }
 
     //---Overlay---//
     &::after {

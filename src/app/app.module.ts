@@ -1,4 +1,6 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
+import { registerLocaleData } from '@angular/common';
+import localePt from '@angular/common/locales/pt'
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -11,6 +13,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SwiperModule } from 'swiper/angular';
 import { CartComponent } from './components/cart/cart.component';
 
+registerLocaleData(localePt);
 
 @NgModule({
   declarations: [
@@ -27,7 +30,12 @@ import { CartComponent } from './components/cart/cart.component';
     AppRoutingModule,
     SwiperModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: LOCALE_ID,
+      useValue: 'pt-BR'
+      }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
