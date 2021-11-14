@@ -78,9 +78,18 @@
         </div>      
       </div>
     </div>  
-
-    <button class="btn add-cart"> Adicionar ao carrinho </button>
-  
-  </div>
     
+    <button class="btn add-cart" (click)="addCart()"> Adicionar ao carrinho </button>
+
+    <div class="product-fav">
+      <img src="../../../assets/icons/heart.png" alt="Adicionar aos favoritos">
+      <h5>Adicionar aos favoritos</h5>
+    </div>
+
+    <div class="product-category">
+      <h4>Categoria:</h4>
+      <span> {{ product?.category }}</span>
+    </div>
+  
+  </div>    
 </div>

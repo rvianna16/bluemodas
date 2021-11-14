@@ -3,7 +3,11 @@
 
   <div class="products-container">
      <swiper      
-      [config]="config"
+     [slidesPerView]="4"       
+     [autoplay]="{
+       delay: 3000,
+       disableOnInteraction: false
+      }"
       class="mySwiper">
       <ng-template swiperSlide *ngFor="let product of products.slice(-4 , products.length)">
         <div class="products-card">

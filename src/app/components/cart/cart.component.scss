@@ -1,6 +1,6 @@
 .cart {
   position: fixed;
-  width: 400px;
+  width: 450px;
   height: 100vh;
   top: 0;
   right: 0;
@@ -29,7 +29,7 @@
   &-header {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 75px;
     background: var(--grey);
     padding: var(--space-md);
 
@@ -91,17 +91,20 @@
     &__name {
       font-weight: 400;
       font-size: 16px;
+      
     }
 
     &__price {
+      display: block;
       color: var(--primary-color);
       font-weight: 700;
+      margin: 5px 0;
     }
 
     &__amount {
       display: flex;
       align-items: center;
-      margin: var(--space-lg);
+      margin: var(--space-md);
 
       .input-btn {
         border: none;
