@@ -1,0 +1,57 @@
+<div class="order container">
+  <div class="order__thanks">
+    <p>Muito obrigado <span>{{ user.firstName }} {{ user.lastName }}</span>. Seu pedido foi recebido com sucesso e será
+      enviado em até <span>3 dias</span></p>
+  </div>
+
+  <div class="order-details">
+    <div class="order-details-header">
+      <p>Data da compra: <span> {{ invoiceDate | date }}</span></p>
+      <p>Número do pedido: <span>BM{{ invoiceNo }}</span></p>
+    </div>
+    <div class="order-details-content">
+      <div class="order-details-info">
+        <div>
+          <h5>De:</h5>
+          <h4>Blue modas</h4>
+          <p>contato@bluemodas.com.br</p>
+          <p>(11) 3512-9880 / (21) 3512-9880</p>
+        </div>
+
+        <div>
+          <h5>Para:</h5>
+          <h4>{{ user.firstName }} {{ user.lastName }}</h4>
+          <p>{{ user.email }}</p>
+          <p>{{ user.number }}</p>
+        </div>
+      </div>
+
+      <h3>Detalhes do pedido:</h3>
+      <div class="cart-content" *ngIf="cartItems.length >= 1">
+        <div class="cart-product" *ngFor="let item of cartItems; let index = index">
+          <img class="cart-product__image" src="{{ item.image }}" alt="Produto">
+          <div class="cart-product__info">
+            <h5 class="cart-product__name"> {{ item.name }}</h5>
+            <span class="cart-product__price"> {{ item.price | currency: 'BRL'}} </span>
+            <p>Tamanho: {{ item.size }}</p>
+            <p>Quantidade: {{ item.quantity }}</p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="order-details-total">
+        <div>
+          <h4>Frete:</h4>
+          <span *ngIf="total < 200">R$30,00</span>
+          <span *ngIf="total >= 200">Grátis</span>
+        </div>
+        <div>
+          <h4>Total:</h4>
+          <span *ngIf="total < 200">{{ total + 30 | currency: 'BRL' }}</span>
+          <span *ngIf="total >= 200">{{ total | currency: 'BRL' }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

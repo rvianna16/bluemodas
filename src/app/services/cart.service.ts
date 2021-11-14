@@ -42,5 +42,10 @@ export class CartService {
     }
     
     this.totalPrice.next(total);
+    return total;
+  }
+
+  clearCart() {
+    this.products = []
   }
 }

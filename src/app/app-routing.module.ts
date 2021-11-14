@@ -4,8 +4,10 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
+import { OrderComponent } from './components/order/order.component';
 import { ProductComponent } from './components/product/product.component';
 import { RegisterComponent } from './components/register/register.component';
+import { AuthGuard } from './guards/auth-guard';
 
 const routes: Routes = [
   {
@@ -23,6 +25,11 @@ const routes: Routes = [
   {
     path: ':category/:id/:product',
     component: ProductComponent
+  },
+  {
+    path: 'order',
+    component: OrderComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: '',

@@ -1,1 +1,23 @@
-<p>register works!</p>
+<div class="register container">
+  <h2 class="register__title">Criar a conta</h2>
+  <form id="register-submit">
+    <label for="name">Nome</label>
+    <input type="text" id="name" name="name" required [(ngModel)]="firstName">
+
+    <label for="lastname">Sobrenome</label>    
+    <input type="text" id="lastname" name="lastname" required [(ngModel)]="lastName">
+
+    <label for="email">E-mail</label>    
+    <input type="email" id="email" name="email" required [(ngModel)]="email">
+
+    <label for="tel">Telefone</label>    
+    <input type="text" id="tel" name="tel" required [(ngModel)]="number">
+
+    <label for="password">Senha</label>    
+    <input type="password" id="password" name="password" required [(ngModel)]="password">
+
+    <button type="submit" class="btn" name="register-submit" (click)="createUser()" >Efetuar registro</button>
+  </form>
+
+  <h3 class="register__register"><a routerLink="/login">Voltar</a></h3>
+</div>

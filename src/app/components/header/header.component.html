@@ -46,7 +46,7 @@
         <div 
         class="header-cart" 
         (click)="openCart()" 
-        aria-label="Carrinho de compra contém 0 produtos"
+        [attr.aria-label]="'Carrinho de compra contém ' + cartItems.length + ' produtos'"
         [attr.aria-expanded]="!tsCart"
         >
           <img src="../../assets/icons/cart.png" alt="Sacola">

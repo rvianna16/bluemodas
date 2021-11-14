@@ -16,9 +16,9 @@ import { ProductComponent } from './components/product/product.component';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
-
-
-
+import { AuthService } from './services/auth.service';
+import { AuthGuard } from './guards/auth-guard';
+import { OrderComponent } from './components/order/order.component';
 
 registerLocaleData(localePt);
 
@@ -32,7 +32,8 @@ registerLocaleData(localePt);
     CartComponent,
     ProductComponent,
     LoginComponent,
-    RegisterComponent,         
+    RegisterComponent,
+    OrderComponent,         
   ],
   imports: [
     BrowserModule,
@@ -45,7 +46,10 @@ registerLocaleData(localePt);
     {
       provide: LOCALE_ID,
       useValue: 'pt-BR'
-      }
+    },
+    AuthService,
+    AuthGuard
+    
   ],
   bootstrap: [AppComponent]
 })

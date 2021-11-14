@@ -1,49 +1,5 @@
 <div class="single-product container">
-  <div class="product-preview">
-    <!--<swiper
-      style="--swiper-navigation-color: #fff;--swiper-pagination-color: #fff"
-      [spaceBetween]="10"      
-      [thumbs]="{ swiper: thumbsSwiper }"           
-      class="mySwiper"
-    >
-      <ng-template swiperSlide
-        ><img
-          src="{{ product.image }}" /></ng-template
-      ><ng-template swiperSlide
-        ><img
-          src="../../../assets/photo-2.jpg" /></ng-template
-      ><ng-template swiperSlide
-        ><img
-          src="../../../assets/photo-3.jpg" /></ng-template
-      ><ng-template swiperSlide
-        ><img
-          src="../../../assets/photo-4.jpg" /></ng-template
-      >
-    </swiper>
-    <swiper
-      (swiper)="thumbsSwiper = $event"
-      [spaceBetween]="10"
-      [slidesPerView]="4"
-      [freeMode]="true"
-      [watchSlidesProgress]="true"      
-      class="mySwiper2"
-     
-
-    >
-    <ng-template swiperSlide
-        ><img
-          src="{{ product.image }}" /></ng-template
-      >><ng-template swiperSlide
-    ><img
-      src="../../../assets/photo-2.jpg" /></ng-template
-  ><ng-template swiperSlide
-    ><img
-      src="../../../assets/photo-3.jpg" /></ng-template
-  ><ng-template swiperSlide
-    ><img
-      src="../../../assets/photo-4.jpg" /></ng-template
-  >
-    </swiper> -->
+  <div class="product-preview">    
   <img src="{{ product?.image }}">
   </div>
 
