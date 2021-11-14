@@ -12,6 +12,9 @@ import { ProductsComponent } from './components/products/products.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SwiperModule } from 'swiper/angular';
 import { CartComponent } from './components/cart/cart.component';
+import { ProductComponent } from './components/product/product.component';
+import { FormsModule } from '@angular/forms';
+
 
 registerLocaleData(localePt);
 
@@ -22,13 +25,15 @@ registerLocaleData(localePt);
     HomeComponent,   
     ProductsComponent, 
     FooterComponent,
-    CartComponent
+    CartComponent,
+    ProductComponent,    
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    SwiperModule
+    SwiperModule,
+    FormsModule
   ],
   providers: [
     {

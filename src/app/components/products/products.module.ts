@@ -10,7 +10,7 @@ import { ProductsService } from 'src/app/services/products.service';
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule,
+    CommonModule
     
   ],
   exports:[ProductsComponent],

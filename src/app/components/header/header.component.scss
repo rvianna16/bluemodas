@@ -30,7 +30,8 @@
       font-weight: 600;
       color: va(--black);
       letter-spacing: 1px;
-      cursor: pointer;          
+      cursor: pointer;      
+      font-size: 18px;    
 
       &::after {
         content: '';

@@ -2,10 +2,9 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Subscription } from 'rxjs';
 
 import { ProductsService } from 'src/app/services/products.service';
-import { SwiperComponent } from "swiper/angular";
 
-import SwiperCore, { Autoplay,Navigation } from "swiper";
-SwiperCore.use([Autoplay, Navigation]);
+import { SwiperOptions } from 'swiper';
+
 
 @Component({
   selector: 'app-products',
@@ -17,23 +16,30 @@ export class ProductsComponent implements OnInit {
 
   public products!: Array<any>;
   subscription!: Subscription;
+  swiper = '';
 
   constructor(private productsService: ProductsService) { }
 
   ngOnInit(): void {
     this.subscription = this.productsService.getProducts()
-    .subscribe(res => {
+    .subscribe(res => {      
       this.products = res;
-    })    
+    })       
   }
 
   ngOnDestroy() {
     this.subscription.unsubscribe();
   }
 
-  teste() {
-    console.log(this.products);
-    
-  }
+  config: SwiperOptions = {
+    slidesPerView: 4,        
+    allowTouchMove: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: true
+    },    
+    loop: false
+  };
 
+  
 }
