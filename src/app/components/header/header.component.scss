@@ -192,4 +192,15 @@
       }
     }
   }
+
+  @media only screen and (max-width: 450px) {
+    &.active:after {
+      width: 150px;
+    }
+    &-content {
+      .logo {
+        width: 160px;
+      }
+    }
+  }
 }

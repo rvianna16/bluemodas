@@ -12,4 +12,9 @@ export class FooterComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  toggleAccordion(event: any) {
+    event.target.classList.toggle('active')
+    event.target.nextElementSibling.classList.toggle('active');
+  }
+
 }

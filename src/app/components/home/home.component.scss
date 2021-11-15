@@ -141,3 +141,18 @@
     }
   }
 }
+
+@media only screen and (max-width: 450px) {
+  .trending {
+    &-products {
+      row-gap: 30px;
+    }
+    
+    &-product {
+      img {
+        width: 150px;
+      }
+    }
+  }
+  
+}

@@ -1,10 +1,9 @@
-@use '../../../assets/scss/mixins';
+@use "../../../assets/scss/mixins";
 
-footer {   
+footer {
   background-color: var(--secondary-color);
   padding: var(--space-lg) 0;
   color: var(--white);
-  
 }
 
 .newsletter {
@@ -14,18 +13,16 @@ footer {
 
   &-flex {
     @include mixins.flex-center;
-    border-right: 1px solid rgba( 255, 255, 255, 0.8);
+    border-right: 1px solid rgba(255, 255, 255, 0.8);
     padding-right: 20px;
   }
   &__title {
-    
     font-size: var(--font-xxl);
     margin-left: 8px;
   }
 
   &__text {
-    
-    opacity: .9;
+    opacity: 0.9;
     max-width: 35%;
     line-height: 25px;
     margin-left: 8px;
@@ -51,7 +48,7 @@ footer {
     width: 32px;
     height: 32px;
     border: none;
-    background: url('../../../assets/icons/send.png');
+    background: url("../../../assets/icons/send.png");
     cursor: pointer;
     margin-right: var(--space-md);
   }
@@ -59,12 +56,11 @@ footer {
 
 .information {
   padding: var(--space-xxl) 0;
-  border-top: 1px solid rgba( 255, 255, 255, .3);
-  border-bottom: 1px solid rgba( 255, 255, 255, .3);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   &-links {
     @include mixins.flex;
     align-items: flex-start;
-    
 
     dt {
       font-weight: 700;
@@ -73,13 +69,12 @@ footer {
     }
 
     li {
-      margin-bottom: var(--space-md);      
+      margin-bottom: var(--space-md);
       cursor: pointer;
       max-width: 300px;
-      opacity: .7;
-      transition: .5s;
+      opacity: 0.7;
+      transition: 0.5s;
 
-     
       &:hover {
         opacity: 1;
       }
@@ -104,7 +99,56 @@ footer {
   img {
     width: 64px;
   }
-
-  
 }
 
+@media only screen and (max-width: 767px) {
+  .newsletter {
+    display: block;
+
+    &-flex {
+      border: none;
+    }
+
+    &__text {
+      max-width: 100%;
+      margin: var(--space-md) 0;
+    }
+
+    &-form {
+      width: 100%;
+    }
+  }
+
+  .information {
+    padding: var(--space-lg) 0;
+
+    &-links {
+      display: block;
+
+      dt {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: var(--space-md) 0;
+
+        &::after {
+          content: "+";
+          display: block;
+          font-size: 30px;
+        }
+
+        &.active::after {
+          content: "-";
+        }
+      }
+
+      dd {
+        display: none;
+
+        &.active {
+          display: block;
+        }
+      }
+    }
+  }
+}
