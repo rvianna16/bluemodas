@@ -11,7 +11,7 @@ export class AuthService {
 
   showMenuEmitter = new EventEmitter<boolean>();
 
-  private apiUrl = 'https://localhost:5001/api/Users';
+  private apiUrl = 'https://bluemodas20211114194147.azurewebsites.net/api/Users';
 
   constructor(private http: HttpClient, private router: Router) {}
 

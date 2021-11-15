@@ -7,6 +7,7 @@ import { CartService } from 'src/app/services/cart.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  openMenu: boolean = false;
   tsCart: boolean = false;
   cartItems: Array<any> = [];
   
@@ -22,5 +23,9 @@ export class HeaderComponent implements OnInit {
 
   onCloseCart(event: any) {
    this.tsCart = event;    
+  }
+
+  menuMobile(e: any) {
+    this.openMenu = !this.openMenu;
   }
 }

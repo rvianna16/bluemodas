@@ -32,7 +32,8 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  login() {
+  login() {    
+    this.get();
     let auth = false;
     this.users.map((userAuth) => {
       if (

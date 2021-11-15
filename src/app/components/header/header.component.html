@@ -8,8 +8,13 @@
   <!-- header-top -->
 
 
-  <div class="header">
+  <div class="header" [class.active]="openMenu">
     <div class="header-content container">
+      <button id="btn-mobile" 
+      aria-label="Abrir menu" 
+      aria-haspopup="true" 
+      aria-expanded="false"
+        (click)="menuMobile($event)"></button>
       <h1>
         <a routerLink="home">
           <img class="logo" src="../../assets/logo.svg" alt="Blue Modas">

@@ -8,7 +8,7 @@ import { map } from 'rxjs/operators'
 })
 export class ProductsService {
 
-  private apiUrl = 'https://localhost:5001/api/Products'
+  private apiUrl = 'https://bluemodas20211114194147.azurewebsites.net/api/Products'
 
   constructor(private http: HttpClient) { }
   

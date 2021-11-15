@@ -109,3 +109,35 @@
     }
   }
 }
+
+@media only screen and (max-width: 940px) {
+  .trending {
+    &-container {
+      left: 0;
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .trending {
+    &__title {
+      text-align: center;
+    }
+
+    &-products {
+      flex-direction: column;
+    }   
+
+    &-product {
+      justify-content: center;
+    }
+  }
+
+  .partners {
+    &__list {      
+      flex-wrap: wrap;
+      row-gap: 30px;
+    }
+  }
+}
