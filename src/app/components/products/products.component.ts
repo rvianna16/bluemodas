@@ -1,8 +1,10 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Subscription } from 'rxjs';
-import Swiper from 'swiper';
 
 import { ProductsService } from 'src/app/services/products.service';
+
+import SwiperCore, { Autoplay } from "swiper";
+SwiperCore.use([Autoplay]);
 
 @Component({
   selector: 'app-products',
@@ -28,8 +30,7 @@ export class ProductsComponent implements OnInit {
   }
 
   public swiperConfig = {
-    slidesPerView: 1,
-    spaceBetween: 20,
+    slidesPerView: 1,    
     autoplay: {
       delay: 3000,
       disableOnInteraction: false

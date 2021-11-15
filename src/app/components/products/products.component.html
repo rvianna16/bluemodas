@@ -76,7 +76,7 @@
   <h2 class="products__title">Nossos produtos</h2>
   <div class="products-container">
     <swiper [config]="swiperConfig">
-      <ng-template swiperSlide *ngFor="let product of products.slice(0 , 3)">
+      <ng-template swiperSlide *ngFor="let product of products.slice(0 , 6)">
         <div class="products-card">
           <div class="product-image" [routerLink]="['/'+product.category, product.id, product.name]">
             <img class="product-image__preview" src="{{ product.image }}">
@@ -124,7 +124,7 @@
 
   <div class="products-container">
     <swiper [config]="swiperConfig">
-      <ng-template swiperSlide *ngFor="let product of products.slice(3 , products.length)">
+      <ng-template swiperSlide *ngFor="let product of products.slice(6 , 12)">
         <div class="products-card">
           <div class="product-image" [routerLink]="['/'+product.category, product.id, product.name]">
             <img class="product-image__preview" src="{{ product.image }}">
