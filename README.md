@@ -1,27 +1,43 @@
-# Bluemodas
+<a href="https://www.linkedin.com/in/rodrigoviannas/">
+    <img alt="By Rodrigo Vianna" src="https://img.shields.io/badge/Made%20by-Rodrigo%20Vianna-darkblue">
+  </a>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
+#
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## :bulb: Blue Modas
 
-## Code scaffolding
+Projeto de E-commerce feito para uma loja de roupas fictícia. O projeto está dividido em duas partes, Web e API.<br>
+A API está disponível neste repositório: https://github.com/rvianna16/bluemodas-api
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+<br>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Features
 
-## Running unit tests
+- Página Home principal, com todas as informações do site.
+- Listagem de produtos.
+- Visualização individual de produto onde é possível adicionar o produto ao carrinho de compras.
+- No carrinho de compras é possível visualizar detalhes do pedido, alterar quantidade do produto, remover do carrinho e finalizar a compra.
+- Ao finalizar a compra, é verificado se o usuário está logado, caso não, será redirecionado para a página de login, onde caso não tenha um cadastro, é possível clicar em ' criar conta ' e realizá-lo.
+- Após logado, ao finalizar a compra é redirecionado para uma página de conclusão do pedido, onde é passado informações sobre o cliente e produtos comprados.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Tecnologias Utilizadas
+- HTML
+- CSS
+- Angular
+- TypeScript
+- Swiper
 
-## Further help
+<br>
+O projeto foi hospedado no site vercel.<br>
+Para rodar este projeto localmente, basta fazer um clone do repositório, ter o angular CLI instalado na máquina, instalar as dependências e efetuar o ng serve
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+---
+
+## 🚀 Resultado do Projeto
+
+:arrow_right: <a href="https://bluemodas.vercel.app/"> Blue Modas </a> :arrow_left:
