@@ -117,6 +117,10 @@ footer {
     &-form {
       width: 100%;
     }
+
+    &__input {
+      font-size: var(--font-lg);
+    }
   }
 
   .information {
@@ -148,6 +152,20 @@ footer {
         &.active {
           display: block;
         }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .information {
+    &-links {
+      dt {
+        font-size: var(--font-lg);
+      }
+
+      dd {
+        font-size: var(--font-md);
       }
     }
   }

@@ -53,6 +53,12 @@ body {
   @include mixins.btn;
 }
 
+@media only screen and (max-width: 450px) {
+  .btn {
+    font-size: var(--font-md);
+  }
+}
+
 // scrollbar style // 
 
 ::-webkit-scrollbar {

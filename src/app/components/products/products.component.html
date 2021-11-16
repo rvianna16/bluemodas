@@ -5,7 +5,7 @@
     <swiper [config]="swiperConfig">
       <ng-template swiperSlide *ngFor="let product of products.slice(-6 , products.length)">
         <div class="products-card">
-          <div class="product-image" [routerLink]="['/'+product.category, product.id, product.name]">
+          <div class="product-image">
             <img class="product-image__preview" src="{{ product.image }}">
             <div class="product-fav">
               <img src="../../../assets/icons/heart.png" alt="Favoritar">
@@ -39,7 +39,7 @@
             <h3 class="product__title" [routerLink]="['/'+product.category, product.id, product.name]"> {{ product.name
               }} </h3>
             <span class="product__price"> {{ product.price | currency: 'BRL' }}</span>
-            <button class="btn add-cart">Adicionar ao carrinho</button>
+            <button class="btn add-cart" [routerLink]="['/'+product.category, product.id, product.name]">Visualizar produto</button>
 
 
           </div>
@@ -78,7 +78,7 @@
     <swiper [config]="swiperConfig">
       <ng-template swiperSlide *ngFor="let product of products.slice(0 , 6)">
         <div class="products-card">
-          <div class="product-image" [routerLink]="['/'+product.category, product.id, product.name]">
+          <div class="product-image">
             <img class="product-image__preview" src="{{ product.image }}">
             <div class="product-fav">
               <img src="../../../assets/icons/heart.png" alt="Favoritar">
@@ -112,7 +112,7 @@
             <h3 class="product__title" [routerLink]="['/'+product.category, product.id, product.name]"> {{ product.name
               }} </h3>
             <span class="product__price"> {{ product.price | currency: 'BRL' }}</span>
-            <button class="btn add-cart">Adicionar ao carrinho</button>
+            <button class="btn add-cart" [routerLink]="['/'+product.category, product.id, product.name]">Visualizar produto</button>
 
 
           </div>
@@ -126,7 +126,7 @@
     <swiper [config]="swiperConfig">
       <ng-template swiperSlide *ngFor="let product of products.slice(6 , 12)">
         <div class="products-card">
-          <div class="product-image" [routerLink]="['/'+product.category, product.id, product.name]">
+          <div class="product-image">
             <img class="product-image__preview" src="{{ product.image }}">
             <div class="product-fav">
               <img src="../../../assets/icons/heart.png" alt="Favoritar">
@@ -160,7 +160,7 @@
             <h3 class="product__title" [routerLink]="['/'+product.category, product.id, product.name]"> {{ product.name
               }} </h3>
             <span class="product__price"> {{ product.price | currency: 'BRL' }}</span>
-            <button class="btn add-cart">Adicionar ao carrinho</button>
+            <button class="btn add-cart" [routerLink]="['/'+product.category, product.id, product.name]">Visualizar produto</button>
 
 
           </div>

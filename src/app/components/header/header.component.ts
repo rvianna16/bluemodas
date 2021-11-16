@@ -27,5 +27,12 @@ export class HeaderComponent implements OnInit {
 
   menuMobile(e: any) {
     this.openMenu = !this.openMenu;
+    e.target.setAttribute('aria-expanded', this.openMenu);
+
+    if (this.openMenu) {
+      e.target.setAttribute('aria-label', 'Fechar menu');
+    } else {
+      e.target.setAttribute('aria-label', 'Abrir menu');
+    }
   }
 }

@@ -168,6 +168,7 @@
 
     &--1 {
       background: url("../../../assets/photo-3.jpg") center;
+      
     }
 
     &--2 {
@@ -207,6 +208,18 @@
     display: block;
 
     &-card {
+      height: 250px;
+
+      &::after {
+        height: 250px;
+      }
+      &__title {
+        font-size: var(--font-xxl);
+      }
+
+      &__text {
+        font-size: var(--font-lg);
+      }
       &--2 {
         margin: var(--space-md) 0;
       }

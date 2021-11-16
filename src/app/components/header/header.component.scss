@@ -117,10 +117,11 @@
       content: "";
       display: block;
       position: absolute;
-      top: 125px;         
+      overflow-y: hidden;
+      top: 120px;         
       left: 0;      
       width: 0;
-      background: var(--grey);
+      background: var(--white);
       height: 250px;
       transition: 0.4s;
       z-index: 100;
@@ -131,14 +132,14 @@
       background: none;
       border: none;
       border-top: 3px solid #000;
-      width: 35px;
+      width: 28px;
       cursor: pointer;
 
       &:after,
       &:before {
         content: "";
         display: block;
-        width: 35px;
+        width: 28px;
         height: 3px;
         background: #000;
         margin-top: 7px;
@@ -199,7 +200,8 @@
     }
     &-content {
       .logo {
-        width: 160px;
+        width: 150px;
+        
       }
     }
   }

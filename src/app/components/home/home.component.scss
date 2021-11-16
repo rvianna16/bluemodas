@@ -37,6 +37,7 @@
     margin: var(--space-lg) 0;
     font-size: var(--font-xxxl);
     font-family: "Dancing Script", cursive;
+    text-align: center;
   }
 }
 
@@ -111,10 +112,21 @@
 }
 
 @media only screen and (max-width: 940px) {
+  .banner {
+    height: 500px;
+    &:after {
+      height: 500px;
+    }
+  }
+
+  .partners {
+    padding-top: 120px;
+  }
   .trending {
     &-container {
       left: 0;
       width: 100%;
+      top: 0;
     }
   }
 }
@@ -143,7 +155,20 @@
 }
 
 @media only screen and (max-width: 450px) {
+  .banner {
+    height: 500px;
+
+    &::after {
+      height: 500px;
+    }  
+  }
+
   .trending {
+
+    &__title {
+      font-size: var(--font-xxl);
+    }
+    
     &-products {
       row-gap: 30px;
     }

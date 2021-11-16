@@ -43,3 +43,15 @@
     width: 100%;
   }
 }
+
+@media only screen and (max-width: 450px) {
+  .login {
+    &__title {
+      font-size: var(--font-xxl);
+    }
+
+    input {
+      font-size: var(--font-lg);
+    }
+  }
+}

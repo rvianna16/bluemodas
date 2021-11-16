@@ -28,7 +28,7 @@ export class AuthService {
           headers,
         }
       )
-      .subscribe((res) => console.log(res));
+      .subscribe();
   }
 
   auth(status: boolean) {

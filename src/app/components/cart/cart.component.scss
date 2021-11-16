@@ -8,6 +8,7 @@
   background: var(--white);
   border-top: 8px solid var(--primary-color);
   transition: 0.5s;
+  z-index: 200;
 
   &-container {
     position: fixed;
@@ -15,7 +16,7 @@
     background: rgba(0, 0, 0, 0.3);
     width: 0;
     height: 100vh;
-    z-index: 100;
+    z-index: 200;
 
     &.active {
       width: 100vw;
@@ -28,14 +29,15 @@
 
   &-header {
     display: flex;
-    align-items: center;
-    gap: 75px;
+    align-items: center;    
     background: var(--grey);
     padding: var(--space-md);
 
     &__title {
       letter-spacing: 0.5px;
       text-transform: uppercase;
+      width: 100%;
+      text-align: center;
     }
 
     &-btn {
@@ -201,15 +203,30 @@
 @media only screen and (max-width: 767px) {
   .cart {
    width: 100%;
-   transform: translateX(800px);
-
-   &-header {
-     gap: 30%;
-   }
+   transform: translateX(800px);   
 
    &-total {
      justify-content: space-around;
    }
   }
+}
 
+@media only screen and (max-width: 450px) {
+  .cart {
+    &-header {
+      &__title {
+        font-size: var(--font-lg);
+      }
+    }
+
+    &-product {
+      font-size: var(--font-md);
+
+      &__amount {
+        input {
+          font-size: var(--font-lg);
+        }
+      }
+    }
+  }
 }
